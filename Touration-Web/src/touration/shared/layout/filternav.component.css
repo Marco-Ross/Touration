@@ -1,0 +1,14 @@
+.filternav{
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 16.5%; /* Set the width of the sidebar */
+    min-width: 150px;
+    position: absolute; /* Fixed Sidebar (stay in place on scroll) */
+    right: 0;
+    background-color: ghostwhite; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+.inner-filternav{
+    padding-left: 10px;
+}
