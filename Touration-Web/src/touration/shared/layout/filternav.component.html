@@ -2,8 +2,13 @@
   <div class="inner-filternav">
     <h3>Filter Options</h3>
     <form class="form-inline active-cyan-4">
-      <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search Places" aria-label="Search">
+      <input class="form-control form-control-sm mr-3 w-75" [(ngModel)]="searchText" name="searchText" type="text" placeholder="Search Places" aria-label="Search">
       <fa-icon [icon]="faSearch" style="color: blue;"></fa-icon>
     </form>
+    <ul>
+      <li *ngFor="let location of locations | filter : searchText">
+          {{location.name}}
+      </li>
+    </ul>
   </div>
 </div>

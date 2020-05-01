@@ -10,8 +10,10 @@ import{
   SharedModule,
   FooterComponent,
   HeaderComponent,
-  FilternavComponent
+  FilternavComponent,
+  FilterPipe
 } from './shared';
+import {HomeSearchService} from './home/home-search.service';
 
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], {useHash: true});
 
@@ -20,7 +22,8 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], {useHash: true
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    FilternavComponent
+    FilternavComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,7 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], {useHash: true
     rootRouting,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [HomeSearchService],
   bootstrap: [AppComponent]
 })
 
